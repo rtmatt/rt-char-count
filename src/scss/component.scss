@@ -21,7 +21,15 @@
   }
   &:after {
     clear: both;
-    @include clearfix
+    //Clearfix
+    &:before,
+    &:after {
+      content: " "; // 1
+      display: table; // 2
+    }
+    &:after {
+      clear: both;
+    }
   }
 }
 

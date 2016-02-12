@@ -1,3 +1,4 @@
+/*! RTCharCount  | (c) 2016 Matt Emrick| MIT license */
 $.fn.rtcharcount = function (opts) {
     return new RTCharacterCountField(this[0], opts);
 };
