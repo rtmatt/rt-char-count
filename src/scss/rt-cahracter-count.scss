@@ -1,0 +1,35 @@
+.rt-form-count-element {
+  display: block; // account for any element using help-block
+  margin-top: 5px;
+  margin-bottom: 0;
+
+  font-size: 1.2rem;
+  text-align: right;
+  &.invalid {
+    color: $brand-danger;
+  }
+  &.valid {
+    color: $brand-success;
+  }
+  > p {
+    margin: 5px 0 0;
+  }
+  &:before, &:after {
+    content: " ";
+    display: table;
+
+  }
+  &:after {
+    clear: both;
+    @include clearfix
+  }
+}
+
+.rt-form-count-element__help-text {
+  float: left;
+  color: lighten($text-color, 20%);
+}
+
+.rt-form-count-element__counter {
+  float: right;
+}
