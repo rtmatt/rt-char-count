@@ -1,16 +1,19 @@
 # rt-char-count
 JS Character Counter
 
-## Laravel Integration	
+### Dependencies
+* jQuery
+* SASS build process
+
+## Installation
+
+
 
 ### Pull In Source
 
-From the root of your project:
-
-
 ``` bash 
 
-$ git clone git@github.com:rtmatt/rt-char-count.git resouces/assets/vendor/rt-char-count
+$ npm install rt-char-count
 
 ```
 
@@ -24,7 +27,7 @@ in gulpfile:
 
  mix.scripts([
        // [...] 
-        './resources/assets/vendor/rt-char-count/src/js/rtcharcount.js',
+         './node_modules/rt-char-count/src/js/rtcharcount.js',
        // [...] 
     ],[dest file]);
 
@@ -36,7 +39,7 @@ in gulpfile:
  
  ``` sass 
  
- @import "/resources/assets/vendor/rt-char-count/src/scss/rt-cahracter-count";
+ @import "node_modules/rt-char-count/src/scss/rt-cahracter-count";
  
  ```
  
