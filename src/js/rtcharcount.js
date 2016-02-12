@@ -1,7 +1,5 @@
 $.fn.rtcharcount = function (opts) {
-    if (this !== 'undefined') {
-        return new RTCharacterCountField(this[0], opts);
-    }
+    return new RTCharacterCountField(this[0], opts);
 };
 
 var RTCharacterCountField = function (element, opts) {
@@ -14,6 +12,10 @@ var RTCharacterCountField = function (element, opts) {
     this.min = this.options.min;
     if (typeof jQuery !== 'function') {
         console.log('this currently depends on jquery');
+        return;
+    }
+    if(typeof element=="undefined"){
+        return;
     }
     this.__init();
 };
