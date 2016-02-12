@@ -7,7 +7,6 @@ $.fn.rtcharcount = function (opts) {
 var RTCharacterCountField = function (element, opts) {
     this.element = element;
     this.charCount = 0;
-
     this.valid = false;
     this.counter_block = null;
     this.options = $.extend(this.defaults, opts);
@@ -17,13 +16,11 @@ var RTCharacterCountField = function (element, opts) {
         console.log('this currently depends on jquery');
     }
     this.__init();
-
-
 };
 RTCharacterCountField.prototype = {
     defaults: {
         min: 0,
-        max: 100,
+        max: 100
     },
     __prepareHelpText: function () {
         var message = [this.max + ' Characters'];
@@ -34,8 +31,6 @@ RTCharacterCountField.prototype = {
             message.unshift('no more than ');
         }
         message.unshift('Please enter ');
-        console.log(message);
-
         return message.join('');
     },
     __append_counterElement: function () {
@@ -54,15 +49,12 @@ RTCharacterCountField.prototype = {
         counter.appendChild(count_element);
         counter.appendChild(text);
         element.appendChild(counter);
-        console.log(this.counter_block);
         var tmp = this.input.parentNode.appendChild(element);
         this.counter_block = tmp;
-
     },
     __updateCharacterCount: function () {
         this.charCount = this.input.value.length;
         this.count_element.innerHTML = this.charCount;
-
     },
     __updateClass: function (RTCCF) {
         var self = RTCCF;
@@ -102,5 +94,4 @@ RTCharacterCountField.prototype = {
         this.__updateCharacterCount();
         this.__checkValid();
     }
-
 };
