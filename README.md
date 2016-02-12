@@ -49,7 +49,7 @@ in gulpfile:
  
 	<div class="form-group" id="form_group_description">
 		<label for="description">Description:</label>
-		<input type="text" class="form-control" name="description" id="description">
+		<input type="text">
 	</div>
  
  ```
