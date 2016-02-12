@@ -60,7 +60,6 @@ RTCharacterCountField.prototype = {
         this.count_element.innerHTML = this.charCount;
     },
     __updateClass: function (RTCCF) {
-        console.log('updating class');
         var self = RTCCF;
         if (self.is_valid) {
             self.counter_block.classList.add('valid');
@@ -79,7 +78,6 @@ RTCharacterCountField.prototype = {
         });
     },
     __checkValid: function (callback) {
-        console.log('checking value');
         this.is_valid = this.charCount <= this.max && this.charCount > this.min;
         if (this.charCount > this.max + 5) {
             var value = this.input.value;
