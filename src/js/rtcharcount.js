@@ -77,7 +77,6 @@ RTCharacterCountField.prototype = {
         this.currentCountElement.innerHTML = this.charCount;
     },
     __updateClass: function (RTCCF) {
-        console.log('update lass');
         var self = RTCCF;
         if (self.is_valid) {
             self.counter_block.classList.add('valid');
@@ -96,7 +95,6 @@ RTCharacterCountField.prototype = {
         });
     },
     __checkValid: function (callback) {
-        console.log('check valid');
         var self = this;
         this.is_valid = this.charCount <= this.max && this.charCount > this.min;
         function callCallback() {
