@@ -1,6 +1,8 @@
 # rt-char-count
 JS Character Counter
 
+Despite Version history, this is in beta.  The first stable release will be version 1.0.0  
+
 ### Dependencies
 * jQuery
 * SASS build process
@@ -13,7 +15,7 @@ JS Character Counter
 
 ``` bash 
 
-$ npm install rt-char-count
+$ npm install rt-char-count --save-dev
 
 ```
 
@@ -27,7 +29,7 @@ in gulpfile:
 
  mix.scripts([
        // [...] 
-         './node_modules/rt-char-count/dist/js/rt-char-count.min.js',
+         './node_modules/rt-char-count/dist/rt-char-count.min.js',
        // [...] 
     ],[dest file]);
 
@@ -64,14 +66,14 @@ from your import stylesheet:
  
 
  ## Usage
- Use jQuery to select an element wrapping the field you would like to limit.  Add your min and max as options:
+ Use jQuery to select an element wrapping the field you would like to limit.  Add your min and max as options.  Make sure to add the class "js--char-count-input" to the input that is to be limited:
  
  
  ``` html 
  
 	<div class="form-group" id="form_group_description">
 		<label for="description">Description:</label>
-		<input type="text">
+		<input type="text" class="js--char-count-input">
 	</div>
  
  ```
