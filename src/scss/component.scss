@@ -2,14 +2,13 @@
   display: block; // account for any element using help-block
   margin-top: 5px;
   margin-bottom: 0;
-
-  font-size: 1.2rem;
+  font-size: .8em;
   text-align: right;
   &.invalid {
-    color: $brand-danger;
+    color: $rtcc-error-color;
   }
   &.valid {
-    color: $brand-success;
+    color: $rtcc-success-color;
   }
   > p {
     margin: 5px 0 0;
@@ -35,7 +34,7 @@
 
 .rt-form-count-element__help-text {
   float: left;
-  color: lighten($text-color, 20%);
+  color: lighten($rtcc-text-color, 20%);
 }
 
 .rt-form-count-element__counter {

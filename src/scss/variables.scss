@@ -1,3 +1,12 @@
-$brand-danger:red;
-$brand-success:green;
-$text-color:#222;
+$rtcc-error-color: red !default;
+@if variable-exists(brand-danger) {
+  $rtcc-error-color: $brand-danger;
+}
+$rtcc-success-color: green !default;
+@if variable-exists(brand-success) {
+  $rtcc-success-color: $brand-success;
+}
+$rtcc-text-color:#222!default;
+@if variable-exists(text-color) {
+  $rtcc-text-color: $text-color;
+}

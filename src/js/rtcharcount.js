@@ -91,7 +91,8 @@ RTCharacterCountField.prototype = {
         return this.is_valid;
     },
     __init: function () {
-        this.input = this.element.querySelectorAll('.form-control')[0];
+        this.input = this.element.querySelectorAll('.js--char-count-input')[0];
+        console.log(this.input);
         this.__append_counterElement();
         this.__attachListeners();
         this.__updateCharacterCount();
